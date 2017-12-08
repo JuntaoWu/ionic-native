@@ -70,11 +70,5 @@ export class BaiduGeolocation extends IonicNativePlugin {
       }
     );
   }
-
-  @Cordova({
-    callbackOrder: 'reverse'
-  })
-  test(): Promise<any> {
-    return;
-  }
+  
 }
