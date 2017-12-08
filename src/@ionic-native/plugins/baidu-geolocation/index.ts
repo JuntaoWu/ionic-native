@@ -42,8 +42,8 @@ declare var baidu_location: any;
   plugin: 'hewz.plugins.baidu-location', // npm package name, example: cordova-plugin-camera
   pluginRef: 'baidu_location', // the variable reference to call the plugin, example: navigator.geolocation
   repo: 'https://github.com/hewz/cordova-baidu-location', // the github repository URL for the plugin
-  install: 'ionic cordova plugin add hewz.plugins.baidu-location', // OPTIONAL install command, in case the plugin requires variables
-  installVariables: [], // OPTIONAL the plugin requires variables
+  install: 'ionic cordova plugin add hewz.plugins.baidu-location --variable API_KEY="Your Baidu Android SDK API_KEY"', // OPTIONAL install command, in case the plugin requires variables
+  installVariables: ['API_KEY'], // OPTIONAL the plugin requires variables
   platforms: ['Android', 'Browser'] // Array of platforms supported, example: ['Android', 'iOS']
 })
 @Injectable()
@@ -70,5 +70,5 @@ export class BaiduGeolocation extends IonicNativePlugin {
       }
     );
   }
-  
+
 }
